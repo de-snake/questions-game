@@ -1,5 +1,19 @@
 # Couples Question Card Game — Slices
 
+## Implementation Standards
+
+All code must adhere to Vercel skills installed in `.agents/skills/`:
+
+| Skill | Key Rules |
+|-------|-----------|
+| `vercel-react-best-practices` | Narrow effect deps (5.6), interaction logic in handlers (5.7), functional setState (5.9), useRef for transient values (5.12), explicit conditionals (6.8), no unnecessary useMemo (5.3) |
+| `vercel-composition-patterns` | Avoid boolean prop proliferation (1.1), use compound components (1.2), lift state into providers (2.3) |
+| `web-design-guidelines` | 48px tap targets, visible focus states, aria-labels, role="alert" for errors, color contrast |
+
+**Before implementing any slice:** Review code against these rules.
+
+---
+
 ## Slice Overview
 
 **Note:** All UI text in Russian.

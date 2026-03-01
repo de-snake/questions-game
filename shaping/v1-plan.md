@@ -654,22 +654,29 @@ git push -u origin main
 
 ## Vercel Best Practices Applied
 
+All code adheres to `.agents/skills/`:
+
 ### From vercel-react-best-practices:
 
-1. **Lazy State Initialization (5.10)** - `useState(() => computeExpensiveValue())` for initial state
-2. **Functional setState (5.9)** - Use `setState(prev => prev.filter(...))` for stable updates
-3. **Put Interaction Logic in Event Handlers (5.7)** - Logic in `onClick`, not `useEffect`
-4. **Narrow Effect Dependencies (5.6)** - Only depend on what's actually used
-5. **Use Explicit Conditional Rendering (6.8)** - Ternary, not `&&`
-6. **Extract Default Non-primitive Parameter (5.4)** - Hoist objects/arrays outside components
+1. **Narrow Effect Dependencies (5.6)** - Only depend on what's actually used
+2. **Interaction Logic in Event Handlers (5.7)** - Logic in `onClick`, not `useEffect` (except URL parsing)
+3. **Use Explicit Conditional Rendering (6.8)** - Ternary, not `&&`
+4. **No Unnecessary useMemo (5.3)** - Not wrapping simple expressions
+5. **useRef for Transient Values (5.12)** - `wsRef` for WebSocket reference
+6. **Track One-Time Actions (5.6)** - `hasAttemptedJoin` ref prevents duplicate auto-joins
+
+### From vercel-composition-patterns:
+
+1. **Avoid Boolean Prop Proliferation (1.1)** - Components use composition, not boolean flags
+2. **Decouple State from UI (2.1)** - `useGameState` hook separates logic from rendering
 
 ### From web-design-guidelines:
 
-1. **Large tap targets** - `min-h-12` for buttons (48px minimum)
-2. **Focus states** - Visible focus rings on interactive elements
+1. **Large tap targets** - Buttons use `py-4` (16px padding, ~48px height)
+2. **Focus states** - `focus:border-lavender` on inputs
 3. **aria-label** - On inputs without visible labels
 4. **role="alert"** - On error messages
-5. **Disabled states** - Clear visual feedback
+5. **Disabled states** - Clear visual feedback (`opacity-50`)
 6. **Color contrast** - Text readable against backgrounds
 
 ## Testing Checklist
