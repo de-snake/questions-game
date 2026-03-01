@@ -1,5 +1,9 @@
 # Couples Question Card Game — Breadboard
 
+## Language
+
+All UI text in Russian (interface language, not question content).
+
 ## Places
 
 | # | Place | Description |
@@ -23,48 +27,48 @@
 | # | Place | Component | Affordance | Control | Wires Out | Returns To |
 |---|-------|-----------|------------|---------|-----------|------------|
 | **P1: Home** |
-| U1 | P1 | home | "Start New Session" button | click | → N1 | — |
+| U1 | P1 | home | "Начать новую сессию" button | click | → N1 | — |
 | U2 | P1 | home | Room code input | type | → S1 | — |
-| U3 | P1 | home | "Join Session" button | click | → N2 | — |
+| U3 | P1 | home | "Присоединиться" button | click | → N2 | — |
 | U4 | P1 | home | Error message | render | — | — |
 | **P2: Waiting** |
 | U5 | P2 | waiting | Room code display | render | — | — |
 | U6 | P2 | waiting | Share link display | render | — | — |
-| U7 | P2 | waiting | "Waiting for partner..." | render | — | — |
+| U7 | P2 | waiting | "Ожидание партнёра..." | render | — | — |
 | U8 | P2 | waiting | Partner joined indicator | render | — | — |
 | **P3: Bundle Selection** |
 | U9 | P3 | bundle-selection | Bundle list | render | → U10, U11 | — |
 | U10 | P3 | bundle-card | Toggle checkbox | click | → N5 | — |
 | U11 | P3 | bundle-card | Bundle name & description | render | — | — |
 | U12 | P3 | bundle-selection | Partner's selections indicator | render | — | — |
-| U13 | P3 | bundle-selection | "Confirm" button | click | → N6 | — |
-| U14 | P3 | bundle-selection | "Waiting for partner..." | render | — | — |
+| U13 | P3 | bundle-selection | "Подтвердить" button | click | → N6 | — |
+| U14 | P3 | bundle-selection | "Ожидание партнёра..." | render | — | — |
 | **P4: Custom Questions** |
 | U15 | P4 | custom-questions | Question input | type | → S4 | — |
-| U16 | P4 | custom-questions | "Add" button | click | → N8 | — |
+| U16 | P4 | custom-questions | "Добавить" button | click | → N8 | — |
 | U17 | P4 | custom-questions | My questions list | render | — | — |
 | U18 | P4 | custom-questions | Remove question button | click | → N9 | — |
-| U19 | P4 | custom-questions | "I'm Done" button | click | → N10 | — |
-| U20 | P4 | custom-questions | "Waiting for partner..." | render | — | — |
+| U19 | P4 | custom-questions | "Готово" button | click | → N10 | — |
+| U20 | P4 | custom-questions | "Ожидание партнёра..." | render | — | — |
 | **P5: Rephrasing** |
-| U21 | P5 | rephrasing | "Preparing your questions..." | render | — | — |
+| U21 | P5 | rephrasing | "Подготавливаем вопросы..." | render | — | — |
 | U22 | P5 | rephrasing | Animated loader | render | — | — |
 | **P6: Voting** |
 | U23 | P6 | voting | Question display | render | — | — |
-| U24 | P6 | voting | "Discuss" button | click | → N13 | — |
-| U25 | P6 | voting | "Skip" button | click | → N14 | — |
+| U24 | P6 | voting | "Обсудить" button | click | → N13 | — |
+| U25 | P6 | voting | "Пропустить" button | click | → N14 | — |
 | U26 | P6 | voting | 30-second timer | render | — | — |
-| U27 | P6 | voting | "Waiting for partner..." | render | — | — |
-| U28 | P6 | voting | "Skipped" transition | render | — | — |
+| U27 | P6 | voting | "Ожидание партнёра..." | render | — | — |
+| U28 | P6 | voting | "Пропущено" transition | render | — | — |
 | **P7: Discussion** |
 | U29 | P7 | discussion | Question display (large) | render | — | — |
-| U30 | P7 | discussion | "Next" button | click | → N16 | — |
+| U30 | P7 | discussion | "Далее" button | click | → N16 | — |
 | **P8: Complete** |
-| U31 | P8 | complete | "Session Complete!" | render | — | — |
+| U31 | P8 | complete | "Сессия завершена!" | render | — | — |
 | U32 | P8 | complete | Stats: discussed count | render | — | — |
 | U33 | P8 | complete | Stats: skipped count | render | — | — |
 | U34 | P8 | complete | Stats: duration | render | — | — |
-| U35 | P8 | complete | "Play Again" button | click | → N17 | — |
+| U35 | P8 | complete | "Играть снова" button | click | → N17 | — |
 
 ---
 

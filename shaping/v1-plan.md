@@ -10,8 +10,8 @@ Enable two players to create/join a session, see when partner joins, and deploy 
 
 ### Local Test
 1. Open two browser tabs
-2. Tab A: Click "Start New Session" → sees room code and share link
-3. Tab B: Enter room code, click "Join" → both tabs show "Partner joined!"
+2. Tab A: Click "Начать новую сессию" → sees room code and share link
+3. Tab B: Enter room code, click "Присоединиться" → both tabs show "Партнёр подключился!"
 4. Both tabs auto-transition to Bundle Selection placeholder
 
 ### Production Test
@@ -19,7 +19,22 @@ Enable two players to create/join a session, see when partner joins, and deploy 
 2. Open live URL on your phone
 3. Create session, share link with partner (different device/network)
 4. Partner opens link, enters code
-5. Both see "Partner joined!" → auto-advance
+5. Both see "Партнёр подключился!" → auto-advance
+
+## Russian UI Text
+
+| Element | Russian |
+|---------|---------|
+| Title | Вопросы для двоих |
+| Subtitle | Значимые разговоры вместе |
+| Start button | Начать новую сессию |
+| Join input placeholder | Введите код комнаты |
+| Join button | Присоединиться |
+| Room code label | Код вашей комнаты |
+| Copy link | Скопировать ссылку |
+| Waiting | Ожидание партнёра... |
+| Partner joined | Партнёр подключился! |
+| Starting | Начинаем сессию... |
 
 ## Affordances
 

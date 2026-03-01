@@ -19,10 +19,10 @@ export function HomeScreen({ onCreateSession, onJoinSession, error }: HomeScreen
     <div className="flex flex-col items-center justify-center min-h-[80vh] gap-8">
       <div className="text-center mb-8">
         <h1 className="text-3xl font-bold text-foreground mb-2">
-          Questions for Two
+          Вопросы для двоих
         </h1>
         <p className="text-muted text-lg">
-          Meaningful conversations, together
+          Значимые разговоры вместе
         </p>
       </div>
 
@@ -31,12 +31,12 @@ export function HomeScreen({ onCreateSession, onJoinSession, error }: HomeScreen
           onClick={onCreateSession}
           className="btn-primary w-full text-lg"
         >
-          Start New Session
+          Начать новую сессию
         </button>
 
         <div className="flex items-center gap-4">
           <div className="h-px bg-lavender/50 flex-1" />
-          <span className="text-muted text-sm">or</span>
+          <span className="text-muted text-sm">или</span>
           <div className="h-px bg-lavender/50 flex-1" />
         </div>
 
@@ -45,17 +45,17 @@ export function HomeScreen({ onCreateSession, onJoinSession, error }: HomeScreen
             type="text"
             value={roomCode}
             onChange={(e) => setRoomCode(e.target.value.toUpperCase())}
-            placeholder="Enter room code"
+            placeholder="Введите код комнаты"
             className="input-field"
             maxLength={6}
-            aria-label="Room code"
+            aria-label="Код комнаты"
           />
           <button
             onClick={handleJoin}
             disabled={roomCode.length !== 6}
             className="btn-secondary w-full text-lg disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            Join Session
+            Присоединиться
           </button>
         </div>
 

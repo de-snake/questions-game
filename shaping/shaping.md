@@ -7,6 +7,7 @@
 - **MVP mindset** — ship fast, iterate later
 - **Deploy after V1** — verify infrastructure works before building more
 - **Usable domain** — not localhost, real URL to share
+- **Russian UI** — all interface text in Russian
 
 ---
 
@@ -21,6 +22,7 @@
 | **V5** | Gentle transitions/fades — no abrupt changes | Must-have |
 | **V6** | Questions displayed large and centered | Must-have |
 | **V7** | No gamification (scores, badges, streaks), no dark theme, no sharp corners | Must-have |
+| **V8** | All UI text in Russian | Must-have |
 
 ---
 

@@ -7,8 +7,8 @@ const nunito = Nunito({
 })
 
 export const metadata = {
-  title: 'Questions for Two',
-  description: 'Meaningful conversations, together',
+  title: 'Вопросы для двоих',
+  description: 'Значимые разговоры вместе',
 }
 
 export default function RootLayout({

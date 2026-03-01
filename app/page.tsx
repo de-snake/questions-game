@@ -41,8 +41,8 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center min-h-[80vh]">
         <div className="card text-center">
           <p className="text-2xl mb-2">✨</p>
-          <p className="font-semibold">Bundle Selection</p>
-          <p className="text-muted text-sm">(V2 coming next)</p>
+          <p className="font-semibold">Выбор наборов</p>
+          <p className="text-muted text-sm">(V2 — скоро)</p>
         </div>
       </div>
     )

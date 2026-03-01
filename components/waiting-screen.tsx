@@ -23,7 +23,7 @@ export function WaitingScreen({ roomCode, playerCount }: WaitingScreenProps) {
     <div className="flex flex-col items-center justify-center min-h-[80vh] gap-6">
       <div className="card w-full text-center space-y-6">
         <div>
-          <p className="text-muted text-sm mb-2">Your room code</p>
+          <p className="text-muted text-sm mb-2">Код вашей комнаты</p>
           <p className="text-4xl font-bold tracking-[0.3em] text-foreground">
             {roomCode}
           </p>
@@ -33,7 +33,7 @@ export function WaitingScreen({ roomCode, playerCount }: WaitingScreenProps) {
           onClick={handleCopyLink}
           className="btn-secondary w-full"
         >
-          Copy Share Link
+          Скопировать ссылку
         </button>
 
         <div className="pt-4">
@@ -41,10 +41,10 @@ export function WaitingScreen({ roomCode, playerCount }: WaitingScreenProps) {
             <div className="text-center">
               <p className="text-2xl mb-2">🎉</p>
               <p className="text-sage font-semibold text-lg">
-                Partner joined!
+                Партнёр подключился!
               </p>
               <p className="text-muted text-sm mt-1">
-                Starting session...
+                Начинаем сессию...
               </p>
             </div>
           ) : (
@@ -53,7 +53,7 @@ export function WaitingScreen({ roomCode, playerCount }: WaitingScreenProps) {
                 <div className="w-4 h-4 bg-lavender rounded-full mx-auto" />
               </div>
               <p className="text-muted">
-                Waiting for your partner...
+                Ожидание партнёра...
               </p>
             </div>
           )}
