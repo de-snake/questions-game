@@ -2,6 +2,8 @@
 
 ## Slice Overview
 
+**Note:** All UI text in Russian.
+
 | # | Slice | Mechanism | Demo |
 |---|-------|-----------|------|
 | V1 | Session Creation & Deploy | P1, P2, N1-N4, N20 + Vercel + PartyKit Cloud | "Share live URL with partner, both join from different devices" |

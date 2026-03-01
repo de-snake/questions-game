@@ -1,12 +1,12 @@
 'use client'
 
-import { useEffect } from 'react'
+import { Suspense, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useGameState } from '@/hooks/use-game-state'
 import { HomeScreen } from '@/components/home-screen'
 import { WaitingScreen } from '@/components/waiting-screen'
 
-export default function Home() {
+function HomeContent() {
   const searchParams = useSearchParams()
   const { state, createRoom, joinRoom, error } = useGameState()
 
@@ -49,4 +49,18 @@ export default function Home() {
   }
 
   return null
+}
+
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="flex flex-col items-center justify-center min-h-[80vh]">
+        <div className="animate-pulse">
+          <div className="w-4 h-4 bg-lavender rounded-full" />
+        </div>
+      </div>
+    }>
+      <HomeContent />
+    </Suspense>
+  )
 }
