@@ -1,11 +1,21 @@
 'use client'
 
+import { useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { useGameState } from '@/hooks/use-game-state'
 import { HomeScreen } from '@/components/home-screen'
 import { WaitingScreen } from '@/components/waiting-screen'
 
 export default function Home() {
+  const searchParams = useSearchParams()
   const { state, createRoom, joinRoom, error } = useGameState()
+
+  useEffect(() => {
+    const roomFromUrl = searchParams.get('room')
+    if (roomFromUrl && roomFromUrl.length === 6 && !state?.roomCode) {
+      joinRoom(roomFromUrl)
+    }
+  }, [searchParams, state?.roomCode, joinRoom])
 
   if (!state || state.phase === 'waiting') {
     if (state?.roomCode) {
