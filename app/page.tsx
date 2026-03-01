@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useEffect } from 'react'
+import { Suspense, useEffect, useRef } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { useGameState } from '@/hooks/use-game-state'
 import { HomeScreen } from '@/components/home-screen'
@@ -9,10 +9,14 @@ import { WaitingScreen } from '@/components/waiting-screen'
 function HomeContent() {
   const searchParams = useSearchParams()
   const { state, createRoom, joinRoom, error } = useGameState()
+  const hasAttemptedJoin = useRef(false)
 
   useEffect(() => {
+    if (hasAttemptedJoin.current) return
+    
     const roomFromUrl = searchParams.get('room')
     if (roomFromUrl && roomFromUrl.length === 6 && !state?.roomCode) {
+      hasAttemptedJoin.current = true
       joinRoom(roomFromUrl)
     }
   }, [searchParams, state?.roomCode, joinRoom])
