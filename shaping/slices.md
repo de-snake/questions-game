@@ -18,7 +18,11 @@
 
 **Plan:** [v1-plan.md](./v1-plan.md)
 
-**Status:** ✅ COMPLETE (local)
+**Status:** ✅ COMPLETE (deployed)
+
+**Live URL:** https://questions-game-five.vercel.app
+
+**PartyKit:** https://questions-game.de-snake.partykit.dev
 
 **Mechanism:** Create new session, generate shareable code/link, allow partner to join, transition when both connected. Deploy to Vercel + PartyKit Cloud for real-world testing.
 

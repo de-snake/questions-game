@@ -166,12 +166,13 @@ flowchart TB
 
 ## Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| Frontend | Next.js 15 (App Router), React 19, Tailwind CSS |
-| Real-time | PartyKit (Cloudflare) |
-| LLM | OpenRouter API |
-| Fonts | Nunito (Google Fonts) |
+| Layer | Technology | URL |
+|-------|------------|-----|
+| Frontend | Next.js 15 (App Router), React 19, Tailwind CSS | https://questions-game-five.vercel.app |
+| Real-time | PartyKit (Cloudflare) | https://questions-game.de-snake.partykit.dev |
+| LLM | OpenRouter API | — |
+| Fonts | Nunito (Google Fonts) | — |
+| Code | GitHub | https://github.com/de-snake/questions-game |
 | Deployment | Vercel (frontend) + PartyKit Cloud |
 
 ---

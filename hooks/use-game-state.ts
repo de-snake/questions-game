@@ -29,7 +29,8 @@ export function useGameState(): UseGameStateReturn {
     if (!roomCode) return
 
     const host = process.env.NEXT_PUBLIC_PARTYKIT_HOST || 'localhost:1999'
-    const ws = new WebSocket(`ws://${host}/party/${roomCode}`)
+    const protocol = host.includes('localhost') ? 'ws' : 'wss'
+    const ws = new WebSocket(`${protocol}://${host}/party/${roomCode}`)
     wsRef.current = ws
 
     ws.onopen = () => {
